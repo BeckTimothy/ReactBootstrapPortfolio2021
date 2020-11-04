@@ -6,7 +6,7 @@ import {applyMiddleware, createStore} from "redux";
 import thunk from "redux-thunk";
 import {Provider} from 'react-redux';
 import {combinedReducers} from "./shared/reducers/index";
-import {FourOhFour} from "./pages/four-oh-four/FourOhFour";
+import {FourOhFour} from "./pages/fourOhFour/FourOhFour";
 import {Container, Row, Col} from "react-bootstrap";
 import './styles.css';
 
