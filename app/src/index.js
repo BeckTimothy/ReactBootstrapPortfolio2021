@@ -8,6 +8,7 @@ import {Provider} from 'react-redux';
 //import {combinedReducers} from "./shared/reducers/index";
 import {FourOhFour} from "./pages/fourOhFour/FourOhFour";
 import {Home} from "./pages/home/Home.js";
+import {Header} from "./shared/components/headerBar/HeaderBar.js";
 import {Container, Row, Col} from "react-bootstrap";
 import './styles.css';
 
@@ -19,7 +20,7 @@ const Routing = (store) => (
 			<BrowserRouter>
 				<Container fluid>
 					<Row className={'sticky-top'}>
-						{/*<Header/>*/}
+						<Header/>
 						<p>Test</p>
 					</Row>
 					<Row>
