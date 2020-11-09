@@ -1,5 +1,6 @@
 import React from "react";
 import {Navbar, Nav} from "react-bootstrap";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 //create HeaderBar JSX to serve the Header
 export const Header = () => {
