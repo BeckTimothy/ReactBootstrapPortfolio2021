@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
+import 'bootstrap/dist/css/bootstrap.css';
 import {applyMiddleware, createStore} from "redux";
 import thunk from "redux-thunk";
 import {Provider} from 'react-redux';
@@ -9,7 +10,7 @@ import {Provider} from 'react-redux';
 import {FourOhFour} from "./pages/fourOhFour/FourOhFour";
 import {Home} from "./pages/home/Home.js";
 import {Header} from "./shared/components/headerBar/HeaderBar.js";
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 import './styles.css';
 
 
