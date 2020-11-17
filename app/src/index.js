@@ -20,7 +20,7 @@ const Routing = (store) => (
 		<Provider store={store}>
 			<BrowserRouter>
 				<Container fluid>
-					<Row className={'sticky-top'}>
+					<Row className={'sticky-top d-block'}>
 						<Header/>
 					</Row>
 					<Row>
