@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row} from "react-bootstrap";
+//import {Col, Row} from "react-bootstrap";
 import image0 from "../buttsss/img/image0.gif";
 import image1 from "../buttsss/img/1.gif";
 import image2 from "../buttsss/img/2.gif";
@@ -20,7 +20,7 @@ import image16 from "../buttsss/img/16.gif";
 import image17 from "../buttsss/img/17.gif";
 import image18 from "../buttsss/img/18.gif";
 import image19 from "../buttsss/img/19.gif";
-import image20 from "../buttsss/img/20.gif";
+//import image20 from "../buttsss/img/20.gif"; //image size is fucking YUGE
 import image21 from "../buttsss/img/21.gif";
 import image22 from "../buttsss/img/22.gif";
 import image23 from "../buttsss/img/23.gif";
@@ -69,7 +69,7 @@ export const Buttsss = () => {
         case 17: displayedImg = <img src={image17} alt="loading..."/>; break;
         case 18: displayedImg = <img src={image18} alt="loading..."/>; break;
         case 19: displayedImg = <img src={image19} alt="loading..."/>; break;
-        case 20: displayedImg = <img src={image20} alt="loading..."/>; break;
+        case 20: displayedImg = <img src={image21} alt="loading..."/>; break;
         case 21: displayedImg = <img src={image21} alt="loading..."/>; break;
         case 22: displayedImg = <img src={image22} alt="loading..."/>; break;
         case 23: displayedImg = <img src={image23} alt="loading..."/>; break;
@@ -97,11 +97,7 @@ export const Buttsss = () => {
 
     return (
         <>
-            <Col>
-                <Row>
-                    {displayedImg}
-                </Row>
-            </Col>
+            {displayedImg}
         </>
     );
 };

@@ -22,7 +22,6 @@ const Routing = (store) => (
 				<Container fluid>
 					<Row className={'sticky-top'}>
 						<Header/>
-						<p>Test</p>
 					</Row>
 					<Row>
 						<Switch>

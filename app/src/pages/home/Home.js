@@ -1,11 +1,11 @@
 import React from "react";
-import {Col, Row, Card, Button} from "react-bootstrap";
-import {Buttsss} from "../../shared/components/buttsss/Buttsss.js"
+//import {Col, Row, Card, Button} from "react-bootstrap";
+
 
 export const Home = () => {
 	return (
 		<>
-			<Buttsss />
+
 
 
 		</>
