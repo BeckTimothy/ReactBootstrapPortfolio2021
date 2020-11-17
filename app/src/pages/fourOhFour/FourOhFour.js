@@ -8,7 +8,7 @@ export const FourOhFour = () => {
             <Col className={'d-flex flex-column align-items-center'}>
                     <h1 className={'px-4 pt-4'}>{`Error 404`}</h1>
 					<Buttsss />
-                    <p className={'px-4 pt-4'}>{`The page you've requested could not be found, please navigate back to `}
+                    <p className={'px-4 pt-4 text-center'}>{`The page you've requested could not be found, please navigate back to `}
                         <a
                             className="text-dark" id={'Link to HomePage'}
                             href={'https://TimothyBeck.com'}>TimothyBeck.com</a>{` to continue browsing our website.`}
