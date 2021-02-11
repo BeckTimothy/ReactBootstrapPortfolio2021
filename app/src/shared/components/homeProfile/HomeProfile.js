@@ -15,7 +15,7 @@ export const Profile = () => {
 	return (
 		<>
 
-				<Row className={'bg-dark vh-75 w-100'}>
+				<Row className={'bg-dark vh-100 vw-100'}>
 					<Col>
 						<Row>{/*above headshot gutter*/}</Row>
 						{/*Paralax Headshot image goes here*/}
