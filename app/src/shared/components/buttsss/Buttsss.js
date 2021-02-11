@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row} from "react-bootstrap";
+import {Row} from "react-bootstrap";
 import image0 from "../buttsss/img/image0.gif";
 import image1 from "../buttsss/img/1.gif";
 import image2 from "../buttsss/img/2.gif";

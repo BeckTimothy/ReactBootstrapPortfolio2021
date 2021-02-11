@@ -1,4 +1,5 @@
 import React from "react";
+import {Row, Col} from "react-bootstrap";
 
 
 //create Profile JSX to serve the Profile
@@ -13,6 +14,19 @@ export const Profile = () => {
 	*/
 	return (
 		<>
+
+				<Row className={'bg-dark vh-75 w-100'}>
+					<Col>
+						<Row>{/*above headshot gutter*/}</Row>
+						{/*Paralax Headshot image goes here*/}
+						<Row>{/*below headshot gutter*/}</Row>
+					</Col>
+					<Col className={'bg-light'}>
+						<Row className={'setHeightFourHun'}>
+							{/*Personal information/stats go here*/}
+						</Row>
+					</Col>
+				</Row>
 
 		</>
 	);
