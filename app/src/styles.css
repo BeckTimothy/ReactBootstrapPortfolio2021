@@ -1,3 +1,20 @@
+/*
+
+#20262c
+#2a3036
+#30343c
+bg-dark: 343A40
+bg-lighterDark 3e444a
+#484e54
+52585e
+#666c72
+
+bg-ekshell
+
+
+*/
+
+
 .setHeightFourHun {
     height: 400px;
 }
@@ -18,4 +35,51 @@
 
 .vw-100 {
     width: 100vw;
+}
+
+.bg-lighterDark {
+    background: #3e444a;
+}
+.bg-ekshell {
+    background: #f9f5fc;
+}
+.profileDrawer {
+    background: #3e444a33;
+    /*border-radius: 5%;*/
+}
+
+.carousel-inner > div {
+    margin-left: auto;
+}
+
+.carousel-control-prev {
+    left: -15%;
+    color: #f9f5fc;
+    opacity: 1;
+}
+
+.carousel-control-next {
+    right: -15%;
+    color: #f9f5fc;
+    opacity: 1;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-item-next {
+    display: none;
+}
+
+.carousel-item-left {
+    display: none;
+}
+
+.carousel-item-right {
+    display: none;
+}
+
+.thirtyThree {
+    width: 33vw;
 }
