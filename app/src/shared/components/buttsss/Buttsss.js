@@ -1,6 +1,7 @@
 import React from "react";
 import {Row} from "react-bootstrap";
-import image0 from "../buttsss/img/image0.gif";
+
+import image0 from "../buttsss/img/0.gif";
 import image1 from "../buttsss/img/1.gif";
 import image2 from "../buttsss/img/2.gif";
 import image3 from "../buttsss/img/3.gif";
@@ -47,7 +48,6 @@ import image40 from "../buttsss/img/40.gif";
 
 //creates random Buttsss for 404 page
 export const Buttsss = () => {
-
     let displayedImg = <img src={image0} alt="comedic animation of a hand drawn booty"/>;
     let numOfImg = 41;
     let randImg = Math.floor(Math.random() * Math.floor(numOfImg));
