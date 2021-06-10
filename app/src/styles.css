@@ -49,7 +49,7 @@ bg-ekshell
 }
 
 .carousel-inner > div {
-    margin-left: auto;
+    /*margin-left: auto;*/
 }
 
 .carousel-control-prev {
@@ -65,18 +65,6 @@ bg-ekshell
 }
 
 .carousel-indicators {
-    display: none;
-}
-
-.carousel-item-next {
-    display: none;
-}
-
-.carousel-item-left {
-    display: none;
-}
-
-.carousel-item-right {
     display: none;
 }
 

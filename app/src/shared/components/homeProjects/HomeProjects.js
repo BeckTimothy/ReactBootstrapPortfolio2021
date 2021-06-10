@@ -26,9 +26,8 @@ export const Projects = () => {
 								<Carousel interval={'15000'} className={''}>
 
 									<Carousel.Item className={'justify-content-center'}>
-
 										<Card style={{width: '18rem' }}>
-											<Card.Img style={{height: '10rem'}} variant="top" src="https://www.timothybeck.com/media/capstone-preview.png" />
+											<Card.Img className={'rounded'} style={{height: '10rem'}} variant="top" src="https://www.timothybeck.com/media/capstone-preview.png" />
 											<Card.Body>
 												<Card.Title>ABQ Veterans</Card.Title>
 												<Card.Text>
@@ -45,7 +44,7 @@ export const Projects = () => {
 
 									<Carousel.Item className={'justify-content-center'}>
 										<Card style={{ width: '18rem' }}>
-											<Card.Img style={{height: '10rem'}} variant="top" src="https://www.timothybeck.com/media/portfolio-preview.png" />
+											<Card.Img className={'rounded'} style={{height: '10rem'}} variant="top" src="https://www.timothybeck.com/media/portfolio-preview.png" />
 											<Card.Body>
 												<Card.Title>2019 Portfolio</Card.Title>
 												<Card.Text>
@@ -61,7 +60,7 @@ export const Projects = () => {
 
 									<Carousel.Item className={'justify-content-center'}>
 										<Card style={{ width: '18rem' }}>
-											<Card.Img style={{height: '10rem'}} variant="top" src="https://imageproxy.themaven.net//https%3A%2F%2Fedm.com%2F.image%2FMTc0NjYyNjI0ODg4MjM1Mzg2%2Fscience-of-earworms-explain-why-never-gonna-give-you-up-is-stuck-in-our-heads-30-years-later.png" />
+											<Card.Img className={'rounded'} style={{height: '10rem'}} variant="top" src="https://imageproxy.themaven.net//https%3A%2F%2Fedm.com%2F.image%2FMTc0NjYyNjI0ODg4MjM1Mzg2%2Fscience-of-earworms-explain-why-never-gonna-give-you-up-is-stuck-in-our-heads-30-years-later.png" />
 											<Card.Body>
 												<Card.Title>NMSAVIN</Card.Title>
 												<Card.Text>
