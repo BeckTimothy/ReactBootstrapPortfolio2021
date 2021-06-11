@@ -1,0 +1,40 @@
+[
+  [null,
+    "../../img/portfolioThumbnails/capstone-preview.png",
+    "../../img/portfolioThumbnails/portfolio-preview.png",
+    "../../img/portfolioThumbnails/nmsavin-preview.png"
+  ],
+  {
+    "projectName": "ABQ Veterans",
+    "projectType": "Web App",
+    "projectShortDescription": "Lorem Ipsum",
+    "projectLongDescription": "Lorem Ipsum",
+    "projectTags": ["Web App", "Full-Stack"],
+    "projectImageURL": "app/src/shared/img/portfolioThumbnails/capstone-preview.png",
+    "projectLiveSiteURL": "",
+    "projectDemoSiteURL": "",
+    "projectHidden": 0
+  },
+  {
+    "projectName": "2019 Portfolio",
+    "projectType": "Web Page",
+    "projectShortDescription": "Lorem Ipsum",
+    "projectLongDescription": "Lorem Ipsum",
+    "projectTags": ["Web App"],
+    "projectImageURL": "app/src/shared/img/portfolioThumbnails/portfolio-preview.png",
+    "projectLiveSiteURL": "",
+    "projectDemoSiteURL": "",
+    "projectHidden": 0
+  },
+  {
+    "projectName": "NMSAVIN",
+    "projectType": "Web App",
+    "projectShortDescription": "Lorem Ipsum",
+    "projectLongDescription": "Lorem Ipsum",
+    "projectTags": ["Web App", "Full-Stack"],
+    "projectImageURL": "app/src/shared/img/portfolioThumbnails/nmsavin-preview.png",
+    "projectLiveSiteURL": "",
+    "projectDemoSiteURL": "",
+    "projectHidden": 0
+  }
+]

@@ -53,17 +53,32 @@ bg-ekshell
 }
 
 .carousel-control-prev {
-    left: -15%;
+    /*left: -15%;*/
+    order: 1;
+    position: static !important;
     color: #f9f5fc;
     opacity: 1;
+}
+
+.carousel-inner {
+    order: 2;
+    overflow: inherit;
 }
 
 .carousel-control-next {
-    right: -15%;
+    /*right: -15%;*/
+    order: 3;
+    position: static !important;
     color: #f9f5fc;
     opacity: 1;
 }
 
+.carousel-item-left {
+    overflow: hidden;
+}
+.carousel-item-left {
+    overflow: hidden;
+}
 .carousel-indicators {
     display: none;
 }

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {applyMiddleware, createStore} from "redux";
 import thunk from "redux-thunk";
 import {Provider} from 'react-redux';
+
 //import {combinedReducers} from "./shared/reducers/index";
 import {FourOhFour} from "./pages/fourOhFour/FourOhFour";
 import {Home} from "./pages/home/Home.js";
@@ -25,6 +26,7 @@ const Routing = (store) => (
 					</Row>
 					<Row>
 						<Switch>
+
 							<Route exact path="/" component={Home}/>
 							<Route component={FourOhFour}/>
 						</Switch>
