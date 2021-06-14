@@ -1,16 +1,12 @@
 [
-  [null,
-    "../../img/portfolioThumbnails/capstone-preview.png",
-    "../../img/portfolioThumbnails/portfolio-preview.png",
-    "../../img/portfolioThumbnails/nmsavin-preview.png"
-  ],
   {
     "projectName": "ABQ Veterans",
     "projectType": "Web App",
-    "projectShortDescription": "Lorem Ipsum",
+    "projectShortDescription": "A web app built to help assist Veterans with obtaining social services to improve quality of life",
     "projectLongDescription": "Lorem Ipsum",
     "projectTags": ["Web App", "Full-Stack"],
-    "projectImageURL": "app/src/shared/img/portfolioThumbnails/capstone-preview.png",
+    "projectImageURL": "../../img/portfolioThumbnails/capstone-preview.png",
+    "projectImageName": "capstone-preview",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
     "projectHidden": 0
@@ -18,10 +14,11 @@
   {
     "projectName": "2019 Portfolio",
     "projectType": "Web Page",
-    "projectShortDescription": "Lorem Ipsum",
+    "projectShortDescription": "Single HTML + CSS page using JS to hide and show content stylized like the Sublime Text Editor.",
     "projectLongDescription": "Lorem Ipsum",
     "projectTags": ["Web App"],
-    "projectImageURL": "app/src/shared/img/portfolioThumbnails/portfolio-preview.png",
+    "projectImageURL": "../../shared/img/portfolioThumbnails/portfolio-preview.png",
+    "projectImageName": "portfolio-preview",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
     "projectHidden": 0
@@ -29,10 +26,11 @@
   {
     "projectName": "NMSAVIN",
     "projectType": "Web App",
-    "projectShortDescription": "Lorem Ipsum",
+    "projectShortDescription": "Notification App to alert victims of status updates regarding criminals and crimes they are subscribed to.",
     "projectLongDescription": "Lorem Ipsum",
     "projectTags": ["Web App", "Full-Stack"],
-    "projectImageURL": "app/src/shared/img/portfolioThumbnails/nmsavin-preview.png",
+    "projectImageURL": "../../shared/img/portfolioThumbnails/nmsavin-preview.png",
+    "projectImageName": "nmsavin-preview",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
     "projectHidden": 0

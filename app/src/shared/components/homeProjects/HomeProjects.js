@@ -1,5 +1,6 @@
 import React from "react";
-import {Row, Col, Card, Button} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Carousel from '../cardCarousel/CardCarousel';
 
 

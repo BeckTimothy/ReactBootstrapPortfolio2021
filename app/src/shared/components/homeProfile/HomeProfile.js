@@ -1,5 +1,6 @@
 import React from "react";
-import {Image, Row, Col} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import {Headshot} from '../parallax/Headshot.js'
 
 //create Profile JSX to serve the Profile
