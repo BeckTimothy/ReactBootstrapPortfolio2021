@@ -8,11 +8,17 @@ import Button from "react-bootstrap/Button";
 import portfolioJson from '../../utils/portfolio.json'
 const portJson = portfolioJson;
 
+let filterList = new Set();
+portJson.forEach(item => {
+	filterList = new Set(...filterList, ...item.projectTags)
+})
 
+//TODO: add dynamic rendering of Live/Demo buttons when they are available
+//TODO: don't render card when neither button is available
 class MyCarousel extends Component {
 	render() {
 		return (
-			<ReactCardCarousel autoplay={ true } autoplay_speed={ 7500 }>
+			<ReactCardCarousel autoplay={ true } autoplay_speed={ 7500 } >
 				{portJson.map(portfolioItem => {
 					return(
 						<>

@@ -94,3 +94,11 @@ bg-ekshell
 .bannerShadow {
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, .2), 0 0 4px 1px rgba(0, 0, 0, .14), 0 0 8px 0 rgba(0, 0, 0, .12) !important;
 }
+
+.w-40 {
+    width: 40% !important;
+}
+
+.w-33 {
+    width: 33.3% !important;
+}

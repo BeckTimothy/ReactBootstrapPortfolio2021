@@ -12,7 +12,7 @@ export const Headshot = () => {
 	return (
 		<>
 			<ParallaxProvider>
-				<Parallax className={'thirtythree'} y={[10, -10]} x={[-50, 50]} tagOuter="FluxCapacitor">
+				<Parallax className={'thirtythree '} y={[10, -10]} x={[-50, 50]} tagOuter="FluxCapacitor">
 
 						<Image src={headshot} />
 
