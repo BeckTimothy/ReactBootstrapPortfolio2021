@@ -102,3 +102,7 @@ bg-ekshell
 .w-33 {
     width: 33.3% !important;
 }
+
+.pt-10vh {
+    padding-top: 10vh !important;
+}

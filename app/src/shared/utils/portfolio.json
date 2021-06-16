@@ -7,8 +7,10 @@
     "projectTags": ["React", "Javascript", "PHP", "Bootstrap", "CSS", "REST API", "HTML"],
     "projectImageURL": "../../img/portfolioThumbnails/capstone-preview.png",
     "projectImageName": "capstone-preview",
-    "projectLiveSiteURL": "",
-    "projectDemoSiteURL": "",
+    "projectPortfolioURL": "test",
+    "projectLiveSiteURL": "test",
+    "projectDemoSiteURL": "test",
+    "projectGithubURL": "test",
     "projectHidden": 0
   },
   {
@@ -19,8 +21,10 @@
     "projectTags": ["Javascript", "CSS", "HTML", "jQuery"],
     "projectImageURL": "../../shared/img/portfolioThumbnails/portfolio-preview.png",
     "projectImageName": "portfolio-preview",
+    "projectPortfolioURL": "test",
     "projectLiveSiteURL": "",
-    "projectDemoSiteURL": "",
+    "projectDemoSiteURL": "test",
+    "projectGithubURL": "test",
     "projectHidden": 0
   },
   {
@@ -31,8 +35,10 @@
     "projectTags": ["React", "Javascript", "PHP", "Bootstrap", "CSS", "REST API", "HTML"],
     "projectImageURL": "../../shared/img/portfolioThumbnails/nmsavin-preview.png",
     "projectImageName": "nmsavin-preview",
-    "projectLiveSiteURL": "",
-    "projectDemoSiteURL": "",
+    "projectPortfolioURL": "",
+    "projectLiveSiteURL": "test",
+    "projectDemoSiteURL": "test",
+    "projectGithubURL": "",
     "projectHidden": 0
   }
 ]

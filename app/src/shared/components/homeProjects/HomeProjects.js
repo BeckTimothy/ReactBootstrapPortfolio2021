@@ -34,7 +34,7 @@ export const Projects = () => {
 			<Row className={'transformProjects bg-dark vw-100 h-75 bannerShadow'}>
 				<Row className={'projectsBorder bg-lighterDark mx-0 px-0 my-5 vw-100'}>
 					<Row className={'transformProjectsFix vw-100 d-flex justify-content-around flex-column flex-lg-row'}>
-						<Col className={'d-flex flex-column align-items-center justify-content-center my-0'}>
+						<Col className={'d-flex flex-column align-items-center justify-content-start pt-10vh my-0'}>
 							<span className={'text-white h1 font-italic mb-5'}>Portfolio</span>
 							<a className={'text-white-50'} href={'https://www.google.com'}>View Full Portfolio</a>
 							<Row className={'align-items-baseline flex-wrap w-40'}>
