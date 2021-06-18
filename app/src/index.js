@@ -10,6 +10,7 @@ import {Provider} from 'react-redux';
 //import {combinedReducers} from "./shared/reducers/index";
 import {FourOhFour} from "./pages/fourOhFour/FourOhFour";
 import {Home} from "./pages/home/Home.js";
+import {Project} from "./pages/project/Project.js";
 import {Header} from "./shared/components/headerBar/HeaderBar.js";
 import {Container, Row} from "react-bootstrap";
 import './styles.css';
@@ -35,7 +36,7 @@ const Routing = (store) => (
 								let cardHidden = portfolioItem.projectHidden || portfolioItem.projectPortfolioURL === "";
 								//Generate routes to pages for each non-hidden project in portfolio json
 								return (!cardHidden ?
-										<Route exact path={`${portfolioItem.projectPortfolioURL}`} component={Home}/> : <></>
+										<Route exact path={portfolioItem.projectPortfolioURL} component={Project} /> : <></>
 								)
 							})}
 							<Route component={FourOhFour}/>
