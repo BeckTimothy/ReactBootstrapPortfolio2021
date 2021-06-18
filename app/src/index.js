@@ -14,6 +14,10 @@ import {Header} from "./shared/components/headerBar/HeaderBar.js";
 import {Container, Row} from "react-bootstrap";
 import './styles.css';
 
+//json imported
+import portfolioJson from './shared/utils/portfolio.json'
+const portJson = portfolioJson;
+
 
 const store = createStore(applyMiddleware(thunk));
 const Routing = (store) => (
@@ -26,8 +30,14 @@ const Routing = (store) => (
 					</Row>
 					<Row>
 						<Switch>
-
 							<Route exact path="/" component={Home}/>
+							{portJson.map(portfolioItem => {
+								let cardHidden = portfolioItem.projectHidden || portfolioItem.projectPortfolioURL === "";
+								//Generate routes to pages for each non-hidden project in portfolio json
+								return (!cardHidden ?
+										<Route exact path={`${portfolioItem.projectPortfolioURL}`} component={Home}/> : <></>
+								)
+							})}
 							<Route component={FourOhFour}/>
 						</Switch>
 					</Row>

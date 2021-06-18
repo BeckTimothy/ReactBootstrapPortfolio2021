@@ -32,8 +32,8 @@ export const Header = () => {
 							<NavDropdown.Divider />
 
 							{portJson.map(item =>{
-								let isHidden = !item.projectHidden || item.projectPortfolioURL === "";
-								return(isHidden ?
+								let isHidden = item.projectHidden || item.projectPortfolioURL === "";
+								return(!isHidden ?
 									<><NavDropdown.Item href={item.projectPortfolioURL}>{item.projectName}</NavDropdown.Item></>
 										: <></>)
 							})}

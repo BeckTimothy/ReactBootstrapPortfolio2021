@@ -49,14 +49,14 @@ class MyCarousel extends Component {
 		return (
 			<ReactCardCarousel autoplay={true} autoplay_speed={7500}>
 				{portJson.map(portfolioItem => {
-					let cardHidden = !portfolioItem.projectHidden || (
+					let cardHidden = portfolioItem.projectHidden || (
 						portfolioItem.projectPortfolioURL === "" &&
 						portfolioItem.projectDemoSiteURL === "" &&
 						portfolioItem.projectLiveSiteURL === "" &&
 						portfolioItem.projectGithubURL === ""
 					);
 
-					return (cardHidden ?
+					return (!cardHidden ?
 							<>
 								<Card style={{width: '18rem'}}>
 									<Card.Img className={'rounded demSexyShadows'} style={{height: '10rem'}} variant="top"

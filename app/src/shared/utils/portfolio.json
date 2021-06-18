@@ -7,11 +7,11 @@
     "projectTags": ["React", "Javascript", "PHP", "Bootstrap", "CSS", "REST API", "HTML"],
     "projectImageURL": "../../img/portfolioThumbnails/capstone-preview.png",
     "projectImageName": "capstone-preview",
-    "projectPortfolioURL": "/abqveterans",
+    "projectPortfolioURL": "/abqVeterans",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
     "projectGithubURL": "",
-    "projectHidden": 0
+    "projectHidden": false
   },
   {
     "projectName": "Portfolio 2019",
@@ -21,11 +21,11 @@
     "projectTags": ["Javascript", "CSS", "HTML", "jQuery"],
     "projectImageURL": "../../shared/img/portfolioThumbnails/portfolio-preview.png",
     "projectImageName": "portfolio-preview",
-    "projectPortfolioURL": "/portfolio2019",
+    "projectPortfolioURL": "/Portfolio2019",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
     "projectGithubURL": "",
-    "projectHidden": 0
+    "projectHidden": false
   },
   {
     "projectName": "NMSAVIN",
@@ -35,10 +35,10 @@
     "projectTags": ["React", "Javascript", "PHP", "Bootstrap", "CSS", "REST API", "HTML"],
     "projectImageURL": "../../shared/img/portfolioThumbnails/nmsavin-preview.png",
     "projectImageName": "nmsavin-preview",
-    "projectPortfolioURL": "/nmsavin",
+    "projectPortfolioURL": "/NMsavin",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
     "projectGithubURL": "",
-    "projectHidden": 0
+    "projectHidden": false
   }
 ]
