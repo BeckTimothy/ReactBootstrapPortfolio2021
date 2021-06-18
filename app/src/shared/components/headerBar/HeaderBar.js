@@ -2,6 +2,13 @@ import React from "react";
 import {Navbar, Nav} from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+
+//json imported
+import portfolioJson from '../../utils/portfolio.json'
+
+//sort portfolioJson alphabetically by the name of the project
+const portJson = portfolioJson.sort((x,y)=>{return x.projectName.toUpperCase().localeCompare(y.projectName.toUpperCase())});
+
 //create HeaderBar JSX to serve the Header
 export const Header = () => {
 
@@ -23,11 +30,13 @@ export const Header = () => {
 						<NavDropdown title="Projects" id="collasible-nav-dropdown">
 							<NavDropdown.Item href="/projects">All Projects</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="/nmsavin">NMSAVIN</NavDropdown.Item>
-							<NavDropdown.Item href="/abqveterans">ABQ Veterans</NavDropdown.Item>
-							<NavDropdown.Item href="/portfolio2021">Portfolio 2021</NavDropdown.Item>
-							<NavDropdown.Item href="/portfolio2019">Portfolio 2019</NavDropdown.Item>
-							<NavDropdown.Item href="/businesscard">Business Card</NavDropdown.Item>
+
+							{portJson.map(item =>{
+								let isHidden = !item.projectHidden || item.projectPortfolioURL === "";
+								return(isHidden ?
+									<><NavDropdown.Item href={item.projectPortfolioURL}>{item.projectName}</NavDropdown.Item></>
+										: <></>)
+							})}
 						</NavDropdown>
 					</Nav>
 				</Navbar.Collapse>

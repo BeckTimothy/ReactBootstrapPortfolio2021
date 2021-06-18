@@ -43,30 +43,35 @@ const getProjectButtons = (projectObject) => {
 }
 
 
-//TODO: don't render card when neither button is available
-class MyCarousel extends Component
-{
-	render()
-	{
+
+class MyCarousel extends Component {
+	render() {
 		return (
 			<ReactCardCarousel autoplay={true} autoplay_speed={7500}>
 				{portJson.map(portfolioItem => {
-					return (
-						<>
-							<Card style={{width: '18rem'}}>
-								<Card.Img className={'rounded demSexyShadows'} style={{height: '10rem'}} variant="top"
-											 src={require(`../../img/portfolioThumbnails/${portfolioItem.projectImageName}.png`)}/>
-								<Card.Body>
-									<Card.Title>{portfolioItem.projectName}</Card.Title>
-									<Card.Text>
-										{portfolioItem.projectShortDescription}
-									</Card.Text>
-									<Row className={'d-flex justify-content-around'}>
-										{getProjectButtons(portfolioItem)}
-									</Row>
-								</Card.Body>
-							</Card>
-						</>
+					let cardHidden = !portfolioItem.projectHidden || (
+						portfolioItem.projectPortfolioURL === "" &&
+						portfolioItem.projectDemoSiteURL === "" &&
+						portfolioItem.projectLiveSiteURL === "" &&
+						portfolioItem.projectGithubURL === ""
+					);
+
+					return (cardHidden ?
+							<>
+								<Card style={{width: '18rem'}}>
+									<Card.Img className={'rounded demSexyShadows'} style={{height: '10rem'}} variant="top"
+												 src={require(`../../img/portfolioThumbnails/${portfolioItem.projectImageName}.png`)}/>
+									<Card.Body>
+										<Card.Title>{portfolioItem.projectName}</Card.Title>
+										<Card.Text>
+											{portfolioItem.projectShortDescription}
+										</Card.Text>
+										<Row className={'d-flex justify-content-around'}>
+											{getProjectButtons(portfolioItem)}
+										</Row>
+									</Card.Body>
+								</Card>
+							</> : <></>
 					)
 				})}
 			</ReactCardCarousel>
