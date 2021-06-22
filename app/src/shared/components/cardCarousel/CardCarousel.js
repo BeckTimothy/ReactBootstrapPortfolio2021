@@ -35,10 +35,10 @@ const getProjectButtons = (projectObject) => {
 
 	return (
 		<>
-			{isProject ? <Button className={'demSexyShadows'} variant="secondary" href={''}>Project Page</Button> : <></>}
-			{isLive ? <Button className={'demSexyShadows'} variant="secondary" href={''}>Live</Button> : <></>}
-			{!isLive && isDemo ? <Button className={'demSexyShadows'} variant="secondary" href={''}>Demo</Button> : <></>}
-			{hasGithub ? <Button className={'demSexyShadows'} variant="secondary" href={''}>Github</Button> : <></>}
+			{isProject ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectPortfolioURL}>Project Page</Button> : <></>}
+			{isLive ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectLiveSiteURL}>Live</Button> : <></>}
+			{!isLive && isDemo ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectDemoSiteURL}>Demo</Button> : <></>}
+			{hasGithub ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectGithubURL}>Github</Button> : <></>}
 		</>)//TODO: change github text to github icon
 }
 
