@@ -26,11 +26,11 @@ const Routing = (store) => (
 	<>
 		<Provider store={store}>
 			<BrowserRouter>
-				<Container fluid>
+				<Container fluid className={'bg-secondary vh-100'}>
 					<Row className={'sticky-top d-block'}>
 						<Header/>
 					</Row>
-					<Row>
+					<Row className={"justify-content-center"}>
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/Portfolio" component={Portfolio}/>

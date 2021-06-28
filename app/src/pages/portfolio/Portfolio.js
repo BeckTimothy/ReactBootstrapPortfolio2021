@@ -7,10 +7,39 @@ import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
 //json imported
 import portfolioJson from '../../shared/utils/portfolio.json'
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 //set variable for project Json
 const portJson = portfolioJson;
 
+
+const getProjectButtons = (projectObject) => {
+	let projectURL = projectObject.projectPortfolioURL;
+	let demoURL = projectObject.projectDemoSiteURL;
+	let liveURL = projectObject.projectLiveSiteURL;
+	let githubURL = projectObject.projectGithubURL;
+	let isProject, isLive, isDemo, hasGithub = false;
+	if(typeof projectURL === 'string' && projectURL !== "") {
+		isProject = true;
+	}
+	if(typeof demoURL === 'string' && demoURL !== "") {
+		isDemo = true;
+	}
+	if(typeof liveURL === 'string' && liveURL !== "") {
+		isLive = true;
+	}
+	if(typeof githubURL === 'string' && githubURL !== "") {
+		hasGithub = true;
+	}
+
+	return (
+		<>
+			{isProject ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectPortfolioURL}>Project Page</Button> : <></>}
+			{isLive ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectLiveSiteURL}>Live Website</Button> : <></>}
+			{!isLive && isDemo ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectDemoSiteURL}>Demo Website</Button> : <></>}
+			{hasGithub ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectGithubURL}>Github Repo</Button> : <></>}
+		</>)
+}
 
 export const Portfolio = (props) => {
 
@@ -22,7 +51,7 @@ export const Portfolio = (props) => {
 
 	return (
 		<>
-			<Col className={""}>
+			<Col className={"col-sm-10 d-flex flex-column justify-content-center "}>
 				{portJson.map(portfolioItem => {
 					let isHidden = portfolioItem.projectHidden;
 					if(!isHidden) {
@@ -32,12 +61,13 @@ export const Portfolio = (props) => {
 
 						return (
 							<>
-								<div className={flexDir + ' d-flex'}>
-									<Col>
+								<div className={flexDir + ' d-flex justify-content-around bg-ekshell rounded my-2 p-3 demSexyShadows insetShadows'}>{/*TODO: change color*/}
+									<Col className={'d-flex flex-column justify-content-between'}>
 										<h1>{portfolioItem.projectName}</h1>
 										<span>{portfolioItem.projectShortDescription}</span>
+										<Row className={'px-3 mt-2'}>{getProjectButtons(portfolioItem)}</Row>
 									</Col>
-									<Col>
+									<Col className={'d-flex justify-content-around'}>
 										<Img className={'rounded demSexyShadows w-50'}
 											  src={require(`../../shared/img/portfolioThumbnails/${portfolioItem.projectImageName}.png`)}/>
 									</Col>
