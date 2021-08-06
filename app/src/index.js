@@ -13,7 +13,7 @@ import {Home} from "./pages/home/Home.js";
 import {Portfolio} from "./pages/portfolio/Portfolio.js";
 import {Project} from "./pages/project/Project.js";
 import {Header} from "./shared/components/headerBar/HeaderBar.js";
-import {Container, Row} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import './styles.css';
 
 //json imported
