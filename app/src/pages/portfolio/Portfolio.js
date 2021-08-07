@@ -34,10 +34,10 @@ const getProjectButtons = (projectObject) => {
 
 	return (
 		<>
-			{isProject ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectPortfolioURL}>Project Page</Button> : <></>}
-			{isLive ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectLiveSiteURL}>Live Website</Button> : <></>}
-			{!isLive && isDemo ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectDemoSiteURL}>Demo Website</Button> : <></>}
-			{hasGithub ? <Button className={'demSexyShadows'} variant="secondary" href={projectObject.projectGithubURL}>Github Repo</Button> : <></>}
+			{isProject ? <Button className={'demSexyShadows mx-2'} variant="secondary" href={projectObject.projectPortfolioURL}>Project Page</Button> : <></>}
+			{isLive ? <Button className={'demSexyShadows mx-2'} variant="secondary" href={projectObject.projectLiveSiteURL}>Live Website</Button> : <></>}
+			{!isLive && isDemo ? <Button className={'demSexyShadows mx-2'} variant="secondary" href={projectObject.projectDemoSiteURL}>Demo Website</Button> : <></>}
+			{hasGithub ? <Button className={'demSexyShadows mx-2'} variant="secondary" href={projectObject.projectGithubURL}>Github Repo</Button> : <></>}
 		</>)
 }
 
@@ -65,7 +65,7 @@ export const Portfolio = (props) => {
 									<Col className={'d-flex flex-column justify-content-between'}>
 										<h1>{portfolioItem.projectName}</h1>
 										<span>{portfolioItem.projectShortDescription}</span>
-										<Row className={'px-3 mt-2'}>{getProjectButtons(portfolioItem)}</Row>
+										<Row className={'d-flex px-3 mt-2'}>{getProjectButtons(portfolioItem)}</Row>
 									</Col>
 									<Col className={'d-flex justify-content-around'}>
 										<Img className={'rounded demSexyShadows w-50'}
