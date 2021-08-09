@@ -41,6 +41,10 @@ const getProjectButtons = (projectObject) => {
 		</>)
 }
 
+
+
+
+
 export const Portfolio = (props) => {
 
 	//set variables for windows width
@@ -48,6 +52,8 @@ export const Portfolio = (props) => {
 	const isLarge = UseWindowWidth() >= 1050;
 	//set counter
 	let isEven = true;
+
+
 
 	return (
 		<>
@@ -57,6 +63,9 @@ export const Portfolio = (props) => {
 					if(!isHidden) {
 						isEven = !isEven; //iterate t/f to make every other card display in opposite flex-directions
 						let flexDir = isEven?'flex-row-reverse':'flex-row';
+
+
+
 
 
 						return (
