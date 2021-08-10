@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from "react";
-import Col from "react-bootstrap/Col";
+import React, {useState} from "react";
+
 import Row from "react-bootstrap/Row";
-import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
+//import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
 import {PortfolioHeader} from "../../shared/components/portfolioHeader/PortFolioHeader";
 import {ReadMeAccordian} from "../../shared/components/readMeAccordian/ReadMeAccordian";
 import {ProjectImages} from "../../shared/components/projectImages/ProjectImages";
 import portfolioJson from '../../shared/utils/portfolio.json'
-import Card from "react-bootstrap/Card";
+
 
 
 
@@ -21,14 +21,37 @@ export const Project = (props) => {
 	document.body.classList.add("bg-secondary");
 	//use path in url to find this project's data from json
 	const thisProject = portJson.reduce((x,y)=>x.projectPortfolioURL===props.match.path?x:y);
-//set variables for windows width
-	const isMedium = UseWindowWidth() >= 768;
-	const isLarge = UseWindowWidth() >= 1050;
+	//set variables for windows width
+	//const isMedium = UseWindowWidth() >= 768;
+	//const isLarge = UseWindowWidth() >= 1050;
 	let isHidden = thisProject.projectHidden;
 
 	let showImages = thisProject.projectImageNum > 0;
+
 	let githubURL = thisProject.projectGithubURL;
-	let hasGithub = (typeof githubURL === 'string' && githubURL !== "");
+	const [hasGithub, setHasGithub] = useState((typeof githubURL === 'string' && githubURL !== ""));
+	const handleHasGithub = (val) => {
+		setHasGithub(val && hasGithub)
+		if(!hasGithub){thisProject.projectGithubURL = null}
+	}
+
+	fetch(githubURL.replace('https://github.com', 'https://api.github.com/repos'), {
+		Accept: 'application/vnd.github.v3+json',
+		method: 'GET',
+	})
+		.then(response => {
+			if (response.ok) {
+				return response.text()
+			}
+			throw response;
+		})
+		.then(data => {
+			try {
+				handleHasGithub(!JSON.parse(data).private)
+			} catch (e) {
+			}
+		})
+		.catch(error => console.log(error))
 
 
 

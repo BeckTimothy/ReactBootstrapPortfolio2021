@@ -1,40 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Img from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
+
+
 export const PortfolioHeader = (item) => {
     item = item.projectObject
 
-    const [hasGithub, setHasGithub] = useState(false);
-    const handleHasGithub = (val) => {
-        setHasGithub(val);
-    }
-    
-    fetch(item.projectGithubURL.replace('https://github.com', 'https://api.github.com/repos'), {
-        Accept: 'application/vnd.github.v3+json',
-        method: 'GET',
-    })
-        .then(response => {
-            if (response.ok) {
-                return response.text()
-            }
-            throw response;
-        })
-        .then(data => {
-            try {
-                handleHasGithub(!JSON.parse(data).private)
-            } catch (e) {
-            }
-        })
-        .catch(error => console.log(error))
+
+
+
 
     const getProjectButtons = () => {
         let projectURL = item.projectPortfolioURL;
         let demoURL = item.projectDemoSiteURL;
         let liveURL = item.projectLiveSiteURL;
-        let isProject, isLive, isDemo = false;
+        let githubURL = item.projectGithubURL;
+        let isProject, isLive, isDemo, hasGithub = false;
         if (typeof projectURL === 'string' && projectURL !== "") {
             isProject = true;
         }
@@ -43,6 +27,9 @@ export const PortfolioHeader = (item) => {
         }
         if (typeof liveURL === 'string' && liveURL !== "") {
             isLive = true;
+        }
+        if (typeof githubURL === 'string' && githubURL !== "") {
+            hasGithub = true;
         }
 
 

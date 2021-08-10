@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Arrow from "../../img/arrowSVG.svg";
-import {render} from 'react-dom';
 import ReactMarkdown from 'react-markdown';
-import gfm from 'remark-gfm';
-//json imported
+
 
 
 export const ReadMeAccordian = (props) => {

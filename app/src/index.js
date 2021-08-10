@@ -6,14 +6,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {applyMiddleware, createStore} from "redux";
 import thunk from "redux-thunk";
 import {Provider} from 'react-redux';
-
-//import {combinedReducers} from "./shared/reducers/index";
 import {FourOhFour} from "./pages/fourOhFour/FourOhFour";
 import {Home} from "./pages/home/Home.js";
 import {Portfolio} from "./pages/portfolio/Portfolio.js";
 import {Project} from "./pages/project/Project.js";
 import {Header} from "./shared/components/headerBar/HeaderBar.js";
-import {Container, Row, Col} from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import './styles.css';
 
 //json imported

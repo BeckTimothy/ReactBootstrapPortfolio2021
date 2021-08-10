@@ -2,11 +2,8 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Img from "react-bootstrap/Image";
-import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
-
-//json imported
+//import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
 import portfolioJson from '../../shared/utils/portfolio.json'
-import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 //set variable for project Json
@@ -48,8 +45,8 @@ const getProjectButtons = (projectObject) => {
 export const Portfolio = (props) => {
 
 	//set variables for windows width
-	const isMedium = UseWindowWidth() >= 768;
-	const isLarge = UseWindowWidth() >= 1050;
+	//const isMedium = UseWindowWidth() >= 768;
+	//const isLarge = UseWindowWidth() >= 1050;
 	//set counter
 	let isEven = true;
 
