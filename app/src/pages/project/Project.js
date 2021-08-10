@@ -27,7 +27,7 @@ export const Project = (props) => {
 	const isLarge = UseWindowWidth() >= 1050;
 	let isHidden = thisProject.projectHidden;
 
-
+	let showImages = thisProject.projectImageNum > 0;
 	let githubURL = thisProject.projectGithubURL;
 	let hasGithub = (typeof githubURL === 'string' && githubURL !== "");
 
@@ -44,8 +44,8 @@ export const Project = (props) => {
 		<>
 			<Row className={'d-flex justify-content-around'}>
 				{!isHidden ? <PortfolioHeader projectObject={thisProject}/>: <></>}
-				<Row className={'col-12'}>
-					<ProjectImages projectObject={thisProject}/>
+				<Row className={'col-12 d-flex justify-content-around'}>
+					{showImages ? <ProjectImages projectObject={thisProject}/>: <></>}
 				</Row>
 				{hasGithub ? <ReadMeAccordian githubURL={thisProject.projectGithubURL}/>: <></>}
 			</Row>
