@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Img from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+import Badge from "react-bootstrap/Badge";
 
 
 
@@ -53,7 +54,20 @@ export const PortfolioHeader = (item) => {
         <div
             className={'col-10 d-flex justify-content-around bg-ekshell rounded my-2 p-3 dualSexyShadows'}>{/*TODO: change color*/}
             <Col className={'d-flex flex-column justify-content-between'}>
-                <h1>{item.projectName}</h1>
+                <Row className={'d-flex align-items-center justify-content-between'}>
+                    <h1 className={''}>{item.projectName}</h1>
+                    <Row className={'d-flex justify-content-around align-items-baseline'}>
+                        <span>Tech: </span>
+                    {item.projectTags.map((item) => {
+                        return (
+                            <>
+                                <Badge className={'px-1 py-0 m-1 badgeSuccess'}>{item}</Badge>
+                            </>
+                        )
+                    })}
+                    </Row>
+                </Row>
+
                 <span>{item.projectShortDescription}</span>
                 <Row className={'px-3 mt-2'}>{getProjectButtons(item)}</Row>
             </Col>
