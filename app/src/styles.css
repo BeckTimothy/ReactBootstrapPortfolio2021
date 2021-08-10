@@ -176,3 +176,7 @@ bg-ekshell
 .markdownParent > p > img {
     max-width: 100%;
 }
+
+.hideOverflowX {
+    overflow-x: hidden !important;
+}

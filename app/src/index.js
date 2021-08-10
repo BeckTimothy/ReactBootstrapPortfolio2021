@@ -19,7 +19,7 @@ import './styles.css';
 //json imported
 import portfolioJson from './shared/utils/portfolio.json'
 const portJson = portfolioJson;
-
+document.body.classList.add("hideOverflowX");
 
 const store = createStore(applyMiddleware(thunk));
 const Routing = (store) => (

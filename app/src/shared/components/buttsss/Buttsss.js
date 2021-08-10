@@ -1,7 +1,7 @@
 import React from "react";
-import {Row} from "react-bootstrap";
+import Row from "react-bootstrap/row";
 
-//buttsss designed and drawn by Pablo Stanley at https://www.buttsss.com/
+//buttsss images designed and drawn by Pablo Stanley at https://www.buttsss.com/
 
 //creates random Buttsss for 404 page
 export const Buttsss = () => {

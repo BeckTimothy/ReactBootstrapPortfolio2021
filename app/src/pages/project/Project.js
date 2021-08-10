@@ -5,7 +5,6 @@ import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
 import {PortfolioHeader} from "../../shared/components/portfolioHeader/PortFolioHeader";
 import {ReadMeAccordian} from "../../shared/components/readMeAccordian/ReadMeAccordian";
 import {ProjectImages} from "../../shared/components/projectImages/ProjectImages";
-//json imported
 import portfolioJson from '../../shared/utils/portfolio.json'
 import Card from "react-bootstrap/Card";
 

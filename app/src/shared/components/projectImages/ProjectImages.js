@@ -1,12 +1,8 @@
 import React, {useEffect, useState} from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
-
-
-
 
 
 
@@ -34,13 +30,10 @@ export const ProjectImages = (props) => {
 
     let projectImages = allImages(thisProject);
 
-
-
-
     return (
         <>
             <Col className={'col-lg-5 bg-ekshell rounded p-2 m-1 dualSexyShadows'}>
-                <Carousel images={projectImages} hasThumbnails={showThumbnails} className={'w-100'} style={{ height: 500 }} />
+                <Carousel images={projectImages} hasMediaButton={false} hasSizeButton={"bottomRight"} hasDotButtons={'bottom'} hasThumbnails={showThumbnails} className={'w-100'} style={{ height: 500 }} />
             </Col>
         </>
     )
