@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import {PortfolioHeader} from "../../shared/components/portfolioHeader/PortFolioHeader";
 import {ReadMeAccordian} from "../../shared/components/readMeAccordian/ReadMeAccordian";
 import {ProjectImages} from "../../shared/components/projectImages/ProjectImages";
+import {ProjectVideos} from "../../shared/components/projectVideos/ProjectVideos";
 import portfolioJson from '../../shared/utils/portfolio.json'
 
 
@@ -27,6 +28,8 @@ export const Project = (props) => {
 	let isHidden = thisProject.projectHidden;
 
 	let showImages = thisProject.projectImageNum > 0;
+	let showVideos = thisProject.projectVideoNum > 0 || thisProject.projectYoutubeLinks.length > 0;
+
 
 	let githubURL = thisProject.projectGithubURL;
 	const [hasGithub, setHasGithub] = useState((typeof githubURL === 'string' && githubURL !== ""));
@@ -66,10 +69,17 @@ export const Project = (props) => {
 		<>
 			<Row className={'d-flex justify-content-around'}>
 				{!isHidden ? <PortfolioHeader projectObject={thisProject}/>: <></>}
-				<Row className={'col-12 d-flex justify-content-around'}>
-					{showImages ? <ProjectImages projectObject={thisProject}/>: <></>}
+				<Row className={'col-10 flex-column bg-ekshell d-flex rounded dualSexyShadows'}>
+					<Row>
+						<h4 className={'my-2 ml-2 pl-2'}>{thisProject.projectName} Media</h4>
+					</Row>
+					<Row className={'d-flex justify-content-around p-0 m-0'}>
+						{showVideos ? <ProjectVideos projectObject={thisProject}/>: <></>}
+						{showImages ? <ProjectImages projectObject={thisProject}/>: <></>}
+					</Row>
+
 				</Row>
-				{hasGithub ? <ReadMeAccordian githubURL={thisProject.projectGithubURL}/>: <></>}
+				{hasGithub ? <ReadMeAccordian projectObject={thisProject}/>: <></>}
 			</Row>
 		</>
 	)

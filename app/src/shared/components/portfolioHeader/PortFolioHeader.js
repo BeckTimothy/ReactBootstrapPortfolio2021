@@ -6,12 +6,8 @@ import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 
 
-
 export const PortfolioHeader = (item) => {
     item = item.projectObject
-
-
-
 
 
     const getProjectButtons = () => {
@@ -50,32 +46,29 @@ export const PortfolioHeader = (item) => {
     }
 
     return (
-
         <div
             className={'col-10 d-flex justify-content-around bg-ekshell rounded my-2 p-3 dualSexyShadows'}>{/*TODO: change color*/}
             <Col className={'d-flex flex-column justify-content-between'}>
                 <Row className={'d-flex align-items-center justify-content-between'}>
                     <h1 className={''}>{item.projectName}</h1>
-                    <Row className={'d-flex justify-content-around align-items-baseline'}>
-                        <span>Tech: </span>
-                    {item.projectTags.map((item) => {
-                        return (
-                            <>
-                                <Badge className={'px-1 py-0 m-1 badgeSuccess'}>{item}</Badge>
-                            </>
-                        )
-                    })}
+                    <Row className={'ml-3 d-flex justify-content-left align-items-center'}>
+                        <span>Tech Stack: </span>
+                        {item.projectTags.map((item) => {
+                            return (
+                                <>
+                                    <Badge className={'px-1 py-0 mx-1 my-1 badgeSuccess'}>{item}</Badge>
+                                </>
+                            )
+                        })}
                     </Row>
                 </Row>
-
                 <span>{item.projectShortDescription}</span>
                 <Row className={'px-3 mt-2'}>{getProjectButtons(item)}</Row>
             </Col>
-            <Col className={'d-flex justify-content-around'}>
-                <Img className={'rounded demSexyShadows w-50'}
-                     src={require(`../../img/portfolioThumbnails/${item.projectImageName}.png`)}/>
-            </Col>
+                <Col className={'d-flex justify-content-around'}>
+                    <Img className={'rounded demSexyShadows w-50'}
+                         src={require(`../../img/portfolioThumbnails/${item.projectImageName}.png`)}/>
+                </Col>
         </div>
-
     )
 };

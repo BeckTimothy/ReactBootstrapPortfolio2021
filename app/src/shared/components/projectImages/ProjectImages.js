@@ -31,8 +31,8 @@ export const ProjectImages = (props) => {
 
     return (
         <>
-            <Col className={'col-lg-5 bg-ekshell rounded p-2 m-1 dualSexyShadows'}>
-                <Carousel images={projectImages} hasMediaButton={false} hasSizeButton={"bottomRight"} hasDotButtons={'bottom'} hasThumbnails={showThumbnails} className={'w-100'} style={{ height: 500 }} />
+            <Col className={'col-lg-5 p-1 m-1 '}>
+                <Carousel className={'w-100 demSexyShadows rounded'} images={projectImages} hasMediaButton={false} hasSizeButton={"bottomRight"} hasDotButtons={'bottom'} hasThumbnails={showThumbnails} style={{ height: 500 }} />
             </Col>
         </>
     )

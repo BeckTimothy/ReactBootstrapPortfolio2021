@@ -18,7 +18,8 @@ export const ReadMeAccordian = (props) => {
 		setIsLoading(false);
 	}
 
-	let githubURL = props.githubURL;
+	let projectName = props.projectObject.projectName;
+	let githubURL = props.projectObject.projectGithubURL;
 	let readmeURL = `${githubURL.replace('https://github.com/', 'https://raw.githubusercontent.com/')}/master/README.md`
 	const [readMe, setReadMe] = useState(null);
 	const handleSetReadMe = (newReadMe) => {
@@ -68,7 +69,7 @@ export const ReadMeAccordian = (props) => {
 								/>
 
 							</div>
-							<h4 className={' my-2 ml-2 hoverPointer'}>{"Project ReadMe "}</h4>
+							<h4 className={' my-2 ml-2 hoverPointer'}>{`${projectName} ReadMe `}</h4>
 							<p className={'my-auto ml-2 text-black-50'}> - Click to Open/Close</p>
 						</Row>
 					</>
@@ -87,7 +88,7 @@ export const ReadMeAccordian = (props) => {
 									/>
 
 								</div>
-								<h4 className={' my-2 ml-2 hoverPointer'}>{"Project ReadMe "}</h4>
+								<h4 className={' my-2 ml-2 hoverPointer'}>{`${projectName} ReadMe `}</h4>
 								<p className={'my-auto ml-2 text-black-50'}> - Click to Open/Close</p>
 							</Row>
 							<Row className={'m-0 d-flex justify-content-start align-items-center rounded-top '}>
