@@ -7,7 +7,7 @@
     "projectTags": ["React", "Javascript", "PHP", "Bootstrap", "CSS", "REST API", "HTML", "MySQL"],
     "projectImageURL": "../../img/portfolioThumbnails/capstone-preview.png",
     "projectImageName": "capstone-preview",
-    "projectPortfolioURL": "/abqVeterans",
+    "projectPortfolioURL": "",
     "projectImageNum": 3,
     "projectVideoNum": 2,
     "projectYoutubeLinks": ["https://www.youtube.com/embed/5_9DHNyQcIY"],
@@ -21,13 +21,13 @@
     "projectType": "Web Page",
     "projectShortDescription": "Single HTML + CSS page using JS to hide and show content stylized like the Sublime Text Editor.",
     "projectLongDescription": "Lorem Ipsum",
-    "projectTags": ["Javascript", "CSS", "HTML", "jQuery"],
+    "projectTags": ["Javascript", "CSS", "HTML", "jQuery", "PHP"],
     "projectImageURL": "../../shared/img/portfolioThumbnails/portfolio-preview.png",
     "projectImageName": "portfolio-preview",
-    "projectPortfolioURL": "/Portfolio2019",
+    "projectPortfolioURL": "",
     "projectLiveSiteURL": "",
     "projectDemoSiteURL": "",
-    "projectGithubURL": "",
+    "projectGithubURL": "https://github.com/BeckTimothy/tbeck-pwp-portfolio",
     "projectHidden": false
   },
   {
@@ -38,9 +38,9 @@
     "projectTags": ["React", "Javascript", "PHP", "Bootstrap", "CSS", "REST API", "HTML"],
     "projectImageURL": "../../shared/img/portfolioThumbnails/nmsavin-preview.png",
     "projectImageName": "nmsavin-preview",
-    "projectPortfolioURL": "/NMsavin",
+    "projectPortfolioURL": "",
     "projectLiveSiteURL": "",
-    "projectDemoSiteURL": "",
+    "projectDemoSiteURL": "http://appdevx.nmsavin.com/",
     "projectGithubURL": "",
     "projectHidden": false
   }

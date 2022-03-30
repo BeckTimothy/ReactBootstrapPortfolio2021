@@ -33,6 +33,7 @@ const Routing = (store) => (
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/Portfolio" component={Portfolio}/>
+
 							{portJson.map(portfolioItem => {
 								let cardHidden = portfolioItem.projectHidden || portfolioItem.projectPortfolioURL === "";
 								//Generate routes to pages for each non-hidden project in portfolio json

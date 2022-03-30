@@ -5,7 +5,6 @@ import Arrow from "../../img/arrowSVG.svg";
 import ReactMarkdown from 'react-markdown';
 
 
-
 export const ReadMeAccordian = (props) => {
 
 	const [isHidden, setIsHidden] = useState(true);
@@ -23,6 +22,7 @@ export const ReadMeAccordian = (props) => {
 	let readmeURL = `${githubURL.replace('https://github.com/', 'https://raw.githubusercontent.com/')}/master/README.md`
 	const [readMe, setReadMe] = useState(null);
 	const handleSetReadMe = (newReadMe) => {
+		newReadMe = newReadMe.includes('<!DOCTYPE html>') ? null : newReadMe;
 		setReadMe(newReadMe);
 	}
 
@@ -40,14 +40,11 @@ export const ReadMeAccordian = (props) => {
 		.catch(error => console.log(error))
 
 
-
-
-
 	return (isLoading ?
 			<>
 				<Row
-					className={'col-10 bg-ekshell-25 d-flex justify-content-start align-items-center rounded my-2 dualSexyShadows'}
-				>
+					className={'d-flex justify-content-start align-items-center '}
+				> {/*col-10 bg-ekshell-25 rounded my-2 dualSexyShadows*/}
 					<div className={'d-inline-block'}>
 						<span></span>
 					</div>
@@ -55,11 +52,13 @@ export const ReadMeAccordian = (props) => {
 				</Row>
 			</>
 			:
+		(readMe === null ? <></>
+				:
 			(isHidden ?
 					<>
 						<Row
-							className={'col-10 bg-ekshell d-flex justify-content-start align-items-center rounded my-2 dualSexyShadows hoverPointer'}
-							onClick={handleIsHidden}>
+							className={'d-flex justify-content-start align-items-center hoverPointer'}
+							onClick={handleIsHidden}> {/*rounded my-2 col-10 bg-ekshell dualSexyShadows */}
 							<div className={'d-inline-block'}>
 								<img
 									src={Arrow}
@@ -75,9 +74,9 @@ export const ReadMeAccordian = (props) => {
 					</>
 					:
 					<>
-						<div className={'rowFix col-10 my-2 dualSexyShadows bg-ekshell rounded'}>
+						<div className={'rowFix'}> {/*col-10 my-2 dualSexyShadows bg-ekshell rounded*/}
 							<Row
-								className={'d-flex justify-content-start align-items-center rounded-top hoverPointer demSexyShadows'}
+								className={'d-flex justify-content-start align-items-center rounded-top hoverPointer '}
 								onClick={handleIsHidden}>
 								<div className={'d-inline-block'}>
 									<img
@@ -92,7 +91,9 @@ export const ReadMeAccordian = (props) => {
 								<p className={'my-auto ml-2 text-black-50'}> - Click to Open/Close</p>
 							</Row>
 							<Row className={'m-0 d-flex justify-content-start align-items-center rounded-top '}>
-								<h6 className={'my-4 ml-2'}>This ReadMe is rendered by your browser as Markdown from a GET request to github - all Links navigate to github.<br/>You can alternatively view this document as intended on <a href={props.githubURL}>my Github.</a></h6>
+								<h6 className={'my-4 ml-2'}>This ReadMe is rendered by your browser as Markdown from a request
+									to github - all Links navigate to github.<br/>You can alternatively view this document as
+									intended on <a href={githubURL}> Github.</a></h6>
 
 							</Row>
 							<Row className={'d-flex justify-content-start align-items-center rounded-bottom '}>
@@ -103,5 +104,5 @@ export const ReadMeAccordian = (props) => {
 						</div>
 					</>
 			)
-	)
+	))
 };

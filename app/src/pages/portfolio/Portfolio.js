@@ -5,11 +5,12 @@ import Img from "react-bootstrap/Image";
 //import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
 import portfolioJson from '../../shared/utils/portfolio.json'
 import Button from "react-bootstrap/Button";
+import {PortfolioHeader} from "../../shared/components/portfolioHeader/PortFolioHeader";
 
 //set variable for project Json
 const portJson = portfolioJson;
 
-
+document.body.classList.add("bg-secondary");
 const getProjectButtons = (projectObject) => {
 	let projectURL = projectObject.projectPortfolioURL;
 	let demoURL = projectObject.projectDemoSiteURL;
@@ -59,25 +60,18 @@ export const Portfolio = (props) => {
 					let isHidden = portfolioItem.projectHidden;
 					if(!isHidden) {
 						isEven = !isEven; //iterate t/f to make every other card display in opposite flex-directions
-						let flexDir = isEven?'flex-row-reverse':'flex-row';
+						let flexDir = isEven?'flex-lg-row-reverse':'flex-lg-row';
 
+						portfolioItem = {...portfolioItem, ...{'flexDir':flexDir}};
 
 
 
 
 						return (
 							<>
-								<div className={flexDir + ' d-flex justify-content-around bg-ekshell rounded my-2 p-3 demSexyShadows insetShadows'}>{/*TODO: change color*/}
-									<Col className={'d-flex flex-column justify-content-between'}>
-										<h1>{portfolioItem.projectName}</h1>
-										<span>{portfolioItem.projectShortDescription}</span>
-										<Row className={'d-flex px-3 mt-2'}>{getProjectButtons(portfolioItem)}</Row>
-									</Col>
-									<Col className={'d-flex justify-content-around'}>
-										<Img className={'rounded demSexyShadows w-50'}
-											  src={require(`../../shared/img/portfolioThumbnails/${portfolioItem.projectImageName}.png`)}/>
-									</Col>
-								</div>
+
+								<PortfolioHeader projectObject={portfolioItem}/>
+
 							</>
 						)
 
