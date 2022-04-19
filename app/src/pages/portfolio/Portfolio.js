@@ -1,11 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Img from "react-bootstrap/Image";
-//import {UseWindowWidth} from "../../shared/utils/UseWindowWIdth";
 import portfolioJson from '../../shared/utils/portfolio.json'
 import Button from "react-bootstrap/Button";
 import {PortfolioHeader} from "../../shared/components/portfolioHeader/PortFolioHeader";
+import {useSelector} from "react-redux";
 
 //set variable for project Json
 const portJson = portfolioJson;
@@ -45,41 +43,51 @@ const getProjectButtons = (projectObject) => {
 
 export const Portfolio = (props) => {
 
+	const [activeFilters, setActiveFilters] = useState([]);
+	const handleActiveFilters = ( filters ) =>{
+		console.log('filters arent the same');
+		console.log(activeFilters);
+		console.log(stateFilters);
+		setActiveFilters( filters );
+	}
+
+	const stateFilters = useSelector(state => (state.filter ? state.filter : []))
+
+	if(stateFilters !== activeFilters){handleActiveFilters(stateFilters)}
+	let filteredJson = [];
+	portJson.forEach(portfolioItem=> {
+		let tagsIncluded = portfolioItem.projectTags.some(tag =>{
+			return stateFilters.includes(tag);
+		});
+		if(tagsIncluded){
+			filteredJson.push(portfolioItem);
+		}
+	})
+	if(filteredJson.length === 0){filteredJson=portJson}
+
 	//set variables for windows width
 	//const isMedium = UseWindowWidth() >= 768;
 	//const isLarge = UseWindowWidth() >= 1050;
 	//set counter
 	let isEven = true;
 
-
-
 	return (
 		<>
 			<Col className={"col-sm-10 d-flex flex-column justify-content-center "}>
-				{portJson.map(portfolioItem => {
+				{filteredJson.map(portfolioItem => {
 					let isHidden = portfolioItem.projectHidden;
 					if(!isHidden) {
 						isEven = !isEven; //iterate t/f to make every other card display in opposite flex-directions
 						let flexDir = isEven?'flex-lg-row-reverse':'flex-lg-row';
-
 						portfolioItem = {...portfolioItem, ...{'flexDir':flexDir}};
-
-
-
-
 						return (
 							<>
-
 								<PortfolioHeader projectObject={portfolioItem}/>
-
 							</>
 						)
-
-
 					} else {
 						return (<></>)
 					}
-
 				})}
 			</Col>
 		</>

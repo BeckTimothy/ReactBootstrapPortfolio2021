@@ -11,6 +11,7 @@ import {Home} from "./pages/home/Home.js";
 import {Portfolio} from "./pages/portfolio/Portfolio.js";
 import {Project} from "./pages/project/Project.js";
 import {Header} from "./shared/components/headerBar/HeaderBar.js";
+import reducers from "./shared/reducers";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import './styles.css';
@@ -20,7 +21,7 @@ import portfolioJson from './shared/utils/portfolio.json'
 const portJson = portfolioJson;
 document.body.classList.add("hideOverflowX");
 
-const store = createStore(applyMiddleware(thunk));
+const store = createStore(reducers, applyMiddleware(thunk));
 const Routing = (store) => (
 	<>
 		<Provider store={store}>
