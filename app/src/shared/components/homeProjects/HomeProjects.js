@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from '../cardCarousel/CardCarousel';
@@ -29,6 +29,38 @@ export const Projects = () => {
 	*/
 
 
+
+	const [activeFilters, setActiveFilters] = useState([]);
+	const [,updateState] = useState();
+	const forceUpdate = React.useCallback(() => updateState({}), []);
+
+	const handleFilters = (filter) => {
+		let newFilterList = activeFilters;
+		newFilterList.includes(filter) ? newFilterList.splice(newFilterList.indexOf(filter),1) : newFilterList.push(filter);
+		console.log(newFilterList);
+		setActiveFilters(newFilterList);
+		forceUpdate();
+	}
+
+	const filterJson = () =>{
+		let filteredJson = [];
+		portJson.forEach(portfolioItem=> {
+			let tagsIncluded = portfolioItem.projectTags.some(tag =>{
+				return activeFilters.includes(tag);
+			});
+			if(tagsIncluded){
+				filteredJson.push(portfolioItem);
+			}
+		})
+		if(filteredJson.length === 0){filteredJson=portJson}
+		return filteredJson;
+	}
+	let portfolioList = filterJson();
+
+	const buttonStyle =(tag)=>{
+		return activeFilters.includes(tag)?"badgeActive":"badgeSuccess"
+	}
+
 	return (
 		<>
 			<Row className={'transformProjects bg-dark vw-100 h-75 bannerShadow'}>
@@ -42,7 +74,7 @@ export const Projects = () => {
 								{Array.from(filterList).map((item) => {
 									return (
 										<>
-											<Button className={'px-1 py-0 m-1'} variant="outline-success" href={''}>{item}</Button>
+											<Button className={'px-1 py-0 m-1 '+ buttonStyle(item)} key={`projectsButton` + item} variant="outline-success" onClick={()=>handleFilters(item)}>{item}</Button>
 										</>
 									)
 								})}
@@ -51,7 +83,7 @@ export const Projects = () => {
 						<Col className={'d-flex flex-column align-items-center justify-content-end m-5 p-5'}>
 
 							<Row className={'col-lg-6'}>
-								<Carousel/>
+								<Carousel portfolioList={portfolioList}/>
 							</Row>
 
 						</Col>

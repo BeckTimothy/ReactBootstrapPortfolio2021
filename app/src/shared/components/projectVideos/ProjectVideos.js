@@ -1,7 +1,7 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Carousel from 'react-gallery-carousel';
+//import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 
 
@@ -17,40 +17,40 @@ import 'react-gallery-carousel/dist/index.css';
 */
 export const ProjectVideos = (props) => {
 
-    const thisProject = props.projectObject;
-    const showThumbnails = thisProject.projectImageNum > 8;
+    //const thisProject = props.projectObject;
+    //const showThumbnails = thisProject.projectImageNum > 8;
 
-    const allVideos = (projectObject) => {
-        let videoArr = [];
+    // const allVideos = (projectObject) => {
+    //     let videoArr = [];
+    //
+    //     let youtubeArr = projectObject.projectYoutubeLinks;
+    //
+    //     youtubeArr.forEach(x => {
+    //         videoArr.push( {
+    //                 src: x
+    //             }
+    //         )
+    //     })
+    //
+    //     let directory = projectObject.projectPortfolioURL;
+    //
+    //     let numOfVids = projectObject.projectVideoNum;
+    //     let ext = ['.mp4','.gif','.avi','.mpeg'];
+    //
+    //     for(let i=0;i<numOfVids;i++){
+    //             ext.forEach(x =>{
+    //                 try {
+    //                     videoArr.push( {
+    //                         src: require(`../../projectVideos${directory}${directory}${i}${x}`)
+    //                         }
+    //                     )
+    //                 } catch (e){}
+    //             })
+    //     }
+    //     return videoArr
+    // }
 
-        let youtubeArr = projectObject.projectYoutubeLinks;
-
-        youtubeArr.forEach(x => {
-            videoArr.push( {
-                    src: x
-                }
-            )
-        })
-
-        let directory = projectObject.projectPortfolioURL;
-
-        let numOfVids = projectObject.projectVideoNum;
-        let ext = ['.mp4','.gif','.avi','.mpeg'];
-
-        for(let i=0;i<numOfVids;i++){
-                ext.forEach(x =>{
-                    try {
-                        videoArr.push( {
-                            src: require(`../../projectVideos${directory}${directory}${i}${x}`)
-                            }
-                        )
-                    } catch (e){}
-                })
-        }
-        return videoArr
-    }
-
-    let projectVideos = allVideos(thisProject);
+    //let projectVideos = allVideos(thisProject);
 
 
 

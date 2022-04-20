@@ -4,16 +4,6 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
-//json imported
-import portfolioJson from '../../utils/portfolio.json'
-
-const portJson = portfolioJson;
-
-let filterList = new Set();
-portJson.forEach(item => {
-	filterList = new Set(...filterList, ...item.projectTags)
-})
-
 const getProjectButtons = (projectObject) => {
 	let projectURL = projectObject.projectPortfolioURL;
 	let demoURL = projectObject.projectDemoSiteURL;
@@ -46,6 +36,8 @@ const getProjectButtons = (projectObject) => {
 
 class MyCarousel extends Component {
 	render() {
+		let portJson = this.props.portfolioList;
+
 		return (
 			<ReactCardCarousel autoplay={true} autoplay_speed={7500}>
 				{portJson.map(portfolioItem => {

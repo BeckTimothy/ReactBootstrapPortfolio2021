@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -6,29 +6,17 @@ import Img from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import {ReadMeAccordian} from "../readMeAccordian/ReadMeAccordian";
-import {useDispatch, useSelector} from "react-redux";
-import {getFilters} from "../../actions/filter";
+//import {useDispatch, useSelector} from "react-redux";
+//import {getFilters} from "../../actions/filter";
 
 export const PortfolioHeader = (item) => {
 	item = item.projectObject
+	let stateFilters = item.activeFilters;
+	let setFilter = (tag) => item.setTagInFilter(tag)
 
-	const dispatch = useDispatch();
-	const stateFilters = useSelector(state => (state.filter ? state.filter : []))
-
-	const [useless, setUseless] = useState()
-	const handleSetUseless = () => {
-		setUseless(null);
-	}
-
-	//adds or removes specified filter from redux store
-	const handleFilters = (filter) => {
-		let newFilterList = stateFilters;
-		stateFilters.includes(filter) ? newFilterList.splice(stateFilters.indexOf(filter),1) : newFilterList.push(filter);
-		dispatch(getFilters(newFilterList))
-	}
 
 	const getProjectButtons = () => {
-		let projectURL = item.projectPortfolioURL;
+		//let projectURL = item.projectPortfolioURL;
 		let demoURL = item.projectDemoSiteURL;
 		let liveURL = item.projectLiveSiteURL;
 		let githubURL = item.projectGithubURL;
@@ -82,7 +70,7 @@ export const PortfolioHeader = (item) => {
 							{item.projectTags.map((item) => {
 								return (
 									<>
-										<Badge className={'px-1 py-0 mx-1 my-1 ' + buttonStyle(item)} onClick={()=>{handleFilters(item)}}>{item}</Badge>
+										<Badge className={'px-1 py-0 mx-1 my-1 ' + buttonStyle(item)} onClick={()=>{setFilter(item)}}>{item}</Badge>
 									</>
 								)
 							})}
