@@ -34,10 +34,12 @@ const getProjectButtons = (projectObject) => {
 
 
 
+
 class MyCarousel extends Component {
 	render() {
-		let portJson = this.props.portfolioList;
 
+		let portJson = this.props.portfolioList;
+		console.log(`number of cards: ${portJson.length}`)
 		return (
 			<ReactCardCarousel autoplay={true} autoplay_speed={7500}>
 				{portJson.map(portfolioItem => {

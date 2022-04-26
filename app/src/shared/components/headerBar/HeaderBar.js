@@ -25,6 +25,7 @@ export const Header = () => {
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="mr-auto">
 						<Nav.Link href="/portfolio">Portfolio</Nav.Link>
+						{/*
 						<Nav.Link href="/experience">Experiences</Nav.Link>
 						<Nav.Link href="/about">About Me</Nav.Link>
 						<NavDropdown title="Projects" id="collasible-nav-dropdown">
@@ -38,6 +39,7 @@ export const Header = () => {
 										: <></>)
 							})}
 						</NavDropdown>
+						*/}
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>

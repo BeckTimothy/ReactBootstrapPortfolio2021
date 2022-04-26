@@ -6,7 +6,6 @@
 bg-dark: 343A40
 bg-lighterDark 3e444a
 #484e54
-52585e
 #666c72
 
 bg-ekshell
@@ -14,6 +13,10 @@ bg-ekshell
 
 */
 
+
+.linkOverride {
+    color: #212529;
+}
 
 .setHeightFourHun {
     height: 400px;
@@ -48,6 +51,16 @@ bg-ekshell
 }
 .bg-ekshell-25 {
     background: #f9f5fc40;
+}
+
+.ekshell {
+    color: #f9f5fc;
+}
+.ekshell-50 {
+    color: #f9f5fc80;
+}
+.ekshell-25 {
+    color: #f9f5fc40;
 }
 .profileDrawer {
     background: #3e444a33;
@@ -102,8 +115,8 @@ bg-ekshell
 }
 
 .dualSexyShadows {
-    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .4), 0 3px 4px 0 rgba(0, 0, 0, .34), 0 1px 8px 0 rgba(0, 0, 0, .22), inset 0 0 6px 6px rgba(0, 0, 0, .15),
-    inset  2px 2px 4px 2px rgba(0, 0, 0, .3) !important;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .4), 0 3px 4px 0 rgba(0, 0, 0, .34), 0 1px 8px 0 rgba(0, 0, 0, .22), inset 0 0 6px 6px rgba(0, 0, 0, .05),
+    inset  2px 2px 4px 2px rgba(0, 0, 0, .1) !important;
 }
 
 .insetShadows {
@@ -123,6 +136,15 @@ bg-ekshell
     width: 33.3% !important;
 }
 
+.vh-80 {
+    min-height: 80vh;
+}
+.vh-75 {
+    min-height: 75vh;
+}
+.vh-60 {
+    min-height: 60vh;
+}
 .vh-50 {
     min-height: 50vh;
 }
@@ -181,6 +203,9 @@ bg-ekshell
     overflow-x: hidden !important;
 }
 
+.bigText {
+    font-size: 5rem;
+}
 
 .badgeSuccess{
     color: #28a745;

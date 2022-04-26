@@ -78,7 +78,7 @@ export const Portfolio = (props) => {
 
 	return (
 		<>
-			<Col className={"col-sm-10 d-flex flex-column justify-content-center "}>
+			<Col className={"col-sm-10 d-flex flex-column"}>
 				{portfolioList.map(portfolioItem => {
 					let isHidden = portfolioItem.projectHidden;
 					if(!isHidden) {

@@ -37,7 +37,7 @@ export const Projects = () => {
 	const handleFilters = (filter) => {
 		let newFilterList = activeFilters;
 		newFilterList.includes(filter) ? newFilterList.splice(newFilterList.indexOf(filter),1) : newFilterList.push(filter);
-		console.log(newFilterList);
+		//console.log(newFilterList);
 		setActiveFilters(newFilterList);
 		forceUpdate();
 	}
@@ -57,6 +57,7 @@ export const Projects = () => {
 	}
 	let portfolioList = filterJson();
 
+	console.log(portfolioList);
 	const buttonStyle =(tag)=>{
 		return activeFilters.includes(tag)?"badgeActive":"badgeSuccess"
 	}
@@ -67,8 +68,10 @@ export const Projects = () => {
 				<Row className={'projectsBorder bg-lighterDark mx-0 px-0 my-5 vw-100'}>
 					<Row className={'transformProjectsFix vw-100 d-flex justify-content-around flex-column flex-lg-row'}>
 						<Col className={'d-flex flex-column align-items-center justify-content-start pt-10vh my-0'}>
-							<span className={'text-white h1 font-italic mb-5'}>Portfolio</span>
-							<a className={'text-white-50'} href={'https://www.google.com'}>View Full Portfolio</a>
+							<span className={'ekshell bigText h1 font-italic mb-5'}>Portfolio</span>
+							<a className={'ekshell-50'} href={'https://www.google.com'}>View Full Portfolio</a>
+
+							{/*
 							<Row className={'align-items-baseline flex-wrap w-40'}>
 								<span className={'text-white mt-4 text-left'}>Filter by: </span>
 								{Array.from(filterList).map((item) => {
@@ -79,6 +82,8 @@ export const Projects = () => {
 									)
 								})}
 							</Row>
+							*/}
+
 						</Col>
 						<Col className={'d-flex flex-column align-items-center justify-content-end m-5 p-5'}>
 

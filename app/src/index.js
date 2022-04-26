@@ -30,11 +30,11 @@ const Routing = (store) => (
 					<Row className={'sticky-top d-block'}>
 						<Header key={'Header'}/>
 					</Row>
-					<Row className={"justify-content-center"}>
+					<Row className={"justify-content-center h-100"}>
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/Portfolio" component={Portfolio}/>
-
+							<Route exact path="/businesscard" component={Home}/>
 							{/*{portJson.map(portfolioItem => {*/}
 							{/*	let cardHidden = portfolioItem.projectHidden || portfolioItem.projectPortfolioURL === "";*/}
 							{/*	//Generate routes to pages for each non-hidden project in portfolio json*/}

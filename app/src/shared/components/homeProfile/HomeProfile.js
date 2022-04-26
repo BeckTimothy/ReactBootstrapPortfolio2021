@@ -61,7 +61,7 @@ export const Profile = () => {
 							Email:
 						</Col>
 						<Col className={'col-6 text-left h6'}>
-							dev@timothybeck.com
+							<a className={'linkOverride'} href={'mailto: dev@timothybeck.com'}>dev@timothybeck.com</a>
 						</Col>
 						<Col className={'col-3'}>
 						</Col>
@@ -72,7 +72,7 @@ export const Profile = () => {
 							Github:
 						</Col>
 						<Col className={'col-6 text-left h6'}>
-							Github.com/BeckTimothy/
+							<a className={'linkOverride'} href={'https://Github.com/BeckTimothy/'}>Github.com/BeckTimothy/</a>
 						</Col>
 						<Col className={'col-3'}>
 						</Col>
@@ -83,12 +83,13 @@ export const Profile = () => {
 							LinkedIn:
 						</Col>
 						<Col className={'col-6 text-left h6'}>
-							Linkedin.com/in/timothymbeck/
+							<a className={'linkOverride'} href={'https://Linkedin.com/in/timothymbeck/'}>Linkedin.com/in/timothymbeck/</a>
 						</Col>
 						<Col className={'col-3'}>
 						</Col>
 					</Row>
 					{/* OBJECTIVE */}
+					{/*
 					<Row className={'profileDrawer d-flex justify-content-center m-0'}>
 						<Col className={'col-3 text-right h6'}>
 							Objective:
@@ -99,14 +100,21 @@ export const Profile = () => {
 						<Col className={'col-2'}>
 						</Col>
 					</Row>
+					*/}
 					{/* HOBBIES */}
 					<Row className={'profileDrawer d-flex justify-content-center m-0'}>
 						<Col className={'col-3 text-right h6'}>
 							Hobbies:
 						</Col>
 						<Col className={'col-7 text-left h6'}>
-							Video Games, Mechanical Keyboards, Web Applications, Computer Hardware, Competitive Napping,
-							Dungeons & Dragons, and other nerd stuff.
+							3d Printing,
+							Mechanical Keyboards,
+							Video Games,
+							Web Applications,
+							Computer Hardware,
+							Dungeons & Dragons,
+							Hiking, Rock-Climbing, Camping,
+							and other nerd stuff.
 						</Col>
 						<Col className={'col-2'}>
 						</Col>
